@@ -129,10 +129,14 @@ int main()
 
 	
 	Model Cacahuate((char*)"Models/proyecto/cacahuate.obj");
+	Model nenufar((char*)"Models/proyecto/nenufar.obj");
 	Model hongonoche((char*)"Models/proyecto/hongonoche.obj");
 	Model yard((char*)"Models/proyecto/yard.obj");
 	Model backyard((char*)"Models/proyecto/backyard.obj");
 	Model casa((char*)"Models/proyecto/casa.obj");
+	Model valla((char*)"Models/proyecto/vallas.obj");
+	Model sol((char*)"Models/proyecto/sol.obj");
+	Model nuezG((char*)"Models/proyecto/nuezGrande.obj");
 	// Build and compile our shader program
 
 
@@ -424,6 +428,44 @@ int main()
 
 
 		//Carga de modelo 
+		//Nenufar/su PLanta
+		//nen
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+
+		model = glm::translate(model, glm::vec3(-18.6f, -1.35f, -1.2f));
+		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
+		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		nenufar.Draw(lightingShader);
+		//hongo
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+
+		model = glm::translate(model, glm::vec3(-18.6f, 0.4f, -1.8f));
+		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
+		model = glm::rotate(model, glm::radians(-180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		hongonoche.Draw(lightingShader);
+		//nen
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+
+		model = glm::translate(model, glm::vec3(-9.6f, -1.35f, 1.0f));
+		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
+		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		nenufar.Draw(lightingShader);
+		//Hongo
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+
+		model = glm::translate(model, glm::vec3(-9.6f, 0.4f, 0.4f));
+		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
+		model = glm::rotate(model, glm::radians(-180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		hongonoche.Draw(lightingShader);
+
 		//Cacahuate
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
@@ -434,22 +476,93 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Cacahuate.Draw(lightingShader);
 
-		//Cacahuate
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
 
-		model = glm::translate(model, glm::vec3(-14.6f, 0.0f, 3.0f));
+		model = glm::translate(model, glm::vec3(20.6f, 0.0f, 4.5f));
+		model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+		//model = glm::rotate(model, glm::radians(-180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Cacahuate.Draw(lightingShader);
+
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+
+		model = glm::translate(model, glm::vec3(-14.6f, 0.0f, 3.8f));
 		model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
 		model = glm::rotate(model, glm::radians(-180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Cacahuate.Draw(lightingShader);
 
+		//vallas
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+
+		model = glm::translate(model, glm::vec3(-25.6f, 0.0f, -8.0f));
+		model = glm::scale(model, glm::vec3(0.6f, 0.6f, 0.6f));
+		model = glm::rotate(model, glm::radians(-180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		valla.Draw(lightingShader);
+
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+
+		model = glm::translate(model, glm::vec3(-19.6f, 0.0f, -8.0f));
+		model = glm::scale(model, glm::vec3(0.6f, 0.6f, 0.6f));
+		model = glm::rotate(model, glm::radians(-180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		valla.Draw(lightingShader);
+
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+
+		model = glm::translate(model, glm::vec3(-11.6f, 0.0f, -8.0f));
+		model = glm::scale(model, glm::vec3(0.6f, 0.6f, 0.6f));
+		model = glm::rotate(model, glm::radians(-180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		valla.Draw(lightingShader);
+
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+
+		model = glm::translate(model, glm::vec3(-7.6f, 0.0f, -8.0f));
+		model = glm::scale(model, glm::vec3(0.6f, 0.6f, 0.6f));
+		model = glm::rotate(model, glm::radians(-180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		valla.Draw(lightingShader);
+
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+
+		model = glm::translate(model, glm::vec3(10.0f, 0.0f, -8.0f));
+		model = glm::scale(model, glm::vec3(0.6f, 0.6f, 0.6f));
+		model = glm::rotate(model, glm::radians(-180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		valla.Draw(lightingShader);
+
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+
+		model = glm::translate(model, glm::vec3(19.0f, 0.0f, -8.0f));
+		model = glm::scale(model, glm::vec3(0.6f, 0.6f, 0.6f));
+		model = glm::rotate(model, glm::radians(-180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		valla.Draw(lightingShader);
+
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+
+		model = glm::translate(model, glm::vec3(25.0f, 0.0f, -8.0f));
+		model = glm::scale(model, glm::vec3(0.6f, 0.6f, 0.6f));
+		model = glm::rotate(model, glm::radians(-180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		valla.Draw(lightingShader);
 		//Hongo Noche
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
 		
-		model = glm::translate(model, glm::vec3(13.6f, 0.3f, 1.5f));
-		model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+		model = glm::translate(model, glm::vec3(13.6f, 0.3f, 4.5f));
+		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		hongonoche.Draw(lightingShader);
 
@@ -457,9 +570,33 @@ int main()
 		model = glm::mat4(1);
 
 		model = glm::translate(model, glm::vec3(18.6f, 0.3f, 1.3f));
-		model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		hongonoche.Draw(lightingShader);
+
+	
+
+		//nuez Grande
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+
+		model = glm::translate(model, glm::vec3(21.95f, 0.3f, 1.15f));
+		model = glm::scale(model, glm::vec3(0.65f, 0.65f, 0.65f));
+		model = glm::rotate(model, glm::radians(-180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		nuezG.Draw(lightingShader);
+
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+
+		model = glm::translate(model, glm::vec3(-23.6f, 0.0f, 3.8f));
+		model = glm::scale(model, glm::vec3(0.65f, 0.65f, 0.65f));
+		//model = glm::rotate(model, glm::radians(-180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		nuezG.Draw(lightingShader);
+
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
 
 		//Yard
 		view = camera.GetViewMatrix();
@@ -474,11 +611,10 @@ int main()
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
 
-		//model = glm::translate(model, glm::vec3(-50.0f, 0.0f, 0.0f));
 		model = glm::translate(model, glm::vec3(-19.0f, 0.3f, -0.7f));
 		model = glm::scale(model, glm::vec3(1.7f, 1.7f, 1.7f));
 		model = glm::rotate(model, glm::radians(180.0f), glm::vec3(0.0f, 0.0f, 1.0f));
-		//model = glm::scale(model, glm::vec3(0.02f, 0.02f, 0.02f));
+		model = glm::rotate(model, glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		backyard.Draw(lightingShader);
 
@@ -492,6 +628,43 @@ int main()
 		//model = glm::scale(model, glm::vec3(0.02f, 0.02f, 0.02f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		casa.Draw(lightingShader);
+
+		//soles
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+
+		model = glm::translate(model, glm::vec3(18.95f, 8.0f, 3.0f));
+		model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		sol.Draw(lightingShader);
+
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+
+		model = glm::translate(model, glm::vec3(10.0f, 3.0f, -3.0f));
+		model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		sol.Draw(lightingShader);
+
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+
+		model = glm::translate(model, glm::vec3(-23.6f, 5.0f, 3.8f));
+		model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		sol.Draw(lightingShader);
+
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+
+		model = glm::translate(model, glm::vec3(-18.6f, 3.0f, -6.8f));
+		model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		sol.Draw(lightingShader);
 	
 				
 		glBindVertexArray(0);
