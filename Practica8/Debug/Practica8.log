@@ -1,13 +1,13 @@
 ﻿  proy.cpp
-C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\Practica8\proy.cpp(315,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\Practica8\proy.cpp(727,15): warning C4305: '+=': truncamiento de 'double' a 'float'
-C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\Practica8\proy.cpp(734,15): warning C4305: '-=': truncamiento de 'double' a 'float'
-C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\Practica8\proy.cpp(740,15): warning C4305: '+=': truncamiento de 'double' a 'float'
-C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\Practica8\proy.cpp(746,15): warning C4305: '-=': truncamiento de 'double' a 'float'
-C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\Practica8\proy.cpp(939,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\Practica8\proy.cpp(940,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\Practica8\proy.cpp(944,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\Practica8\proy.cpp(945,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\Practica8\proy.cpp(947,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\Practica8\proy.cpp(948,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\Practica8\proy.cpp(337,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\Practica8\proy.cpp(826,15): warning C4305: '+=': truncamiento de 'double' a 'float'
+C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\Practica8\proy.cpp(833,15): warning C4305: '-=': truncamiento de 'double' a 'float'
+C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\Practica8\proy.cpp(839,15): warning C4305: '+=': truncamiento de 'double' a 'float'
+C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\Practica8\proy.cpp(845,15): warning C4305: '-=': truncamiento de 'double' a 'float'
+C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\Practica8\proy.cpp(1040,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\Practica8\proy.cpp(1041,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\Practica8\proy.cpp(1045,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\Practica8\proy.cpp(1046,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\Practica8\proy.cpp(1048,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\Practica8\proy.cpp(1049,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
   Practica8.vcxproj -> C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\Debug\Practica8.exe

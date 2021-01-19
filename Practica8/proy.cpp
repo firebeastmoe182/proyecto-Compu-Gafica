@@ -44,7 +44,16 @@ float range = 0.0f;
 float rot = 0.0f;
 // Light attributes
 glm::vec3 lightPos(0.0f, 0.0f, 0.0f);
-glm::vec3 PosIni(-95.0f, 0.0f, -45.0f);
+glm::vec3 PosIni_bala_HN_F(18.6f, 0.3f, -3.3f);
+glm::vec3 PosIn_sol1(18.95f, 8.0f, 3.0f);
+glm::vec3 PosIn_PTT1(25.6f, -0.7f, 1.3f);
+glm::vec3 PosIn_PTT2(25.6f, -0.7f, 5.0f);
+glm::vec3 PosIn_PTT3(25.6f, -0.7f, -3.0f);
+glm::vec3 posin_KK1(-20.6f, 0.8f, -5.4f);
+glm::vec3 posin_KK2(-20.6f, 2.0f, -5.4f);
+glm::vec3 posin_nen(-20.6f, -1.35f, -1.2f);
+
+
 bool active;
 
 // Positions of the point lights
@@ -57,17 +66,27 @@ glm::vec3 pointLightPositions[] = {
 
 glm::vec3 LightP1;
 
-//Animación del coche
+//Animación
 float movKitX = 0.0;
-float movKitZ = 0.0;
-float rotKit = 0.0;
+float movKitY = 0.0;
+float movptt = 0.0;
+float movkk1 = 0.0;
+float movkk2 = 0.0;
+float movnenX = 0.0;
+float movnenZ = 0.0;
 
-bool circuito = false;
-bool recorrido1 = true;
-bool recorrido2 = false;
-bool recorrido3 = false;
-bool recorrido4 = false;
-bool recorrido5 = false;
+bool animacion1 = false;
+bool bala1 = true;
+bool animacion2 = false;
+bool soles = true;
+bool animacion3 = false;
+bool ptt = true;
+bool animacion4 = false;
+bool kk1 = true;
+bool kk2 = false;
+bool animacion5 = false;
+bool nen1 = true;
+bool nen2 = false;
 
 // Deltatime
 GLfloat deltaTime = 0.0f;	// Time between current frame and last frame
@@ -137,6 +156,9 @@ int main()
 	Model valla((char*)"Models/proyecto/vallas.obj");
 	Model sol((char*)"Models/proyecto/sol.obj");
 	Model nuezG((char*)"Models/proyecto/nuezGrande.obj");
+	Model bala((char*)"Models/proyecto/bala.obj");
+	Model hongosol((char*)"Models/proyecto/hongosol.obj");
+	Model patatabum((char*)"Models/proyecto/patatabum.obj");
 	// Build and compile our shader program
 
 
@@ -428,7 +450,29 @@ int main()
 
 
 		//Carga de modelo 
+
+		//hongosol
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+
+		model = glm::translate(model, glm::vec3(-10.6f, 0.0f, -4.0f));
+		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
+		model = glm::rotate(model, glm::radians(-180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		hongosol.Draw(lightingShader);
+
 		//Nenufar/su PLanta
+
+		//nen
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+
+		model = glm::translate(model, posin_nen + glm::vec3(movnenX, 0,movnenZ));
+		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
+		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		nenufar.Draw(lightingShader);
+
 		//nen
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
@@ -438,7 +482,7 @@ int main()
 		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		nenufar.Draw(lightingShader);
-		//hongo
+		//hongonoche
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
 
@@ -456,7 +500,7 @@ int main()
 		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		nenufar.Draw(lightingShader);
-		//Hongo
+		//Hongonoche
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
 
@@ -569,10 +613,64 @@ int main()
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
 
-		model = glm::translate(model, glm::vec3(18.6f, 0.3f, 1.3f));
+		model = glm::translate(model, glm::vec3(18.6f, 0.3f, -3.5f));
 		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		hongonoche.Draw(lightingShader);
+
+		//bala1
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		model = glm::translate(model, PosIni_bala_HN_F + glm::vec3(movKitX, 0, 0));
+		model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+		
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		bala.Draw(lightingShader);
+		//bala2
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		model = glm::translate(model, posin_KK1 + glm::vec3(movkk1, 0, 0));
+		model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		bala.Draw(lightingShader);
+
+		//bala3
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		model = glm::translate(model, posin_KK2 + glm::vec3(movkk2, 0, 0));
+		model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		bala.Draw(lightingShader);
+
+		//patatbum
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+
+		model = glm::translate(model, PosIn_PTT1 + glm::vec3(0.0f, movptt, 0.0f));
+		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
+		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		patatabum.Draw(lightingShader);
+
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+
+		model = glm::translate(model, PosIn_PTT2 + glm::vec3(0.0f, movptt, 0.0f));
+		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
+		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		patatabum.Draw(lightingShader);
+
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+
+		model = glm::translate(model, PosIn_PTT3 + glm::vec3(0.0f, movptt, 0.0f));
+		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
+		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		patatabum.Draw(lightingShader); 
 
 	
 
@@ -633,9 +731,10 @@ int main()
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
 
-		model = glm::translate(model, glm::vec3(18.95f, 8.0f, 3.0f));
+		model = glm::translate(model, PosIn_sol1 + glm::vec3(0.0f,movKitY, 0.0f));
 		model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
 		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		sol.Draw(lightingShader);
 
@@ -775,126 +874,128 @@ void DoMovement()
 
 	}
 
-	if (keys[GLFW_KEY_T])
+	if (keys[GLFW_KEY_Z])
 	{
-		//pointLightPositions[0].x -= 0.1f;
-		//pointLightPositions[0].y -= 0.1f;
-		pointLightPositions[0].z += 0.1f;
-	}
-	if (keys[GLFW_KEY_G])
-	{
-		//pointLightPositions[0].x -= 0.1f;
-		//pointLightPositions[0].y -= 0.1f;
-		pointLightPositions[0].z -= 0.1f;
+	
+		animacion1 = true;
+		bala1 = true;
 	}
 
-	if (keys[GLFW_KEY_Y])
+	if (keys[GLFW_KEY_X])
 	{
-		pointLightPositions[1].x += 0.1f;
-		pointLightPositions[1].y += 0.1f;
-		pointLightPositions[1].z += 0.1f;
+		animacion2 = true;
+		
 	}
 
-	if (keys[GLFW_KEY_H])
+	if (keys[GLFW_KEY_C])
 	{
-		pointLightPositions[1].x -= 0.1f;
-		pointLightPositions[1].y -= 0.1f;
-		pointLightPositions[1].z -= 0.1f;
+		animacion3 = true;
+
 	}
-	if (keys[GLFW_KEY_U])
+	
+	if (keys[GLFW_KEY_V])
 	{
-		pointLightPositions[2].x += 0.1f;
-		pointLightPositions[2].y += 0.1f;
-		pointLightPositions[2].z += 0.1f;
-	}
-	if (keys[GLFW_KEY_J])
-	{
-		pointLightPositions[2].x -= 0.1f;
-		pointLightPositions[2].y -= 0.1f;
-		pointLightPositions[2].z -= 0.1f;
-	}
-	if (keys[GLFW_KEY_I])
-	{
-		pointLightPositions[3].x += 0.1f;
-		pointLightPositions[3].y += 0.1f;
-		pointLightPositions[3].z += 0.1f;
-		circuito = true;
+		animacion4 = true;
+		kk1 = true;
+
 	}
 
-	if (keys[GLFW_KEY_O])
+	if (keys[GLFW_KEY_B])
 	{
-		circuito = false;
+		animacion5 = true;
+		nen1 = true;
 	}
-	if (keys[GLFW_KEY_K])
-	{
-		pointLightPositions[3].x -= 0.1f;
-		pointLightPositions[3].y -= 0.1f;
-		pointLightPositions[3].z -= 0.1f;
-	}
-
 }
 
 
 void animacion()
 {
-
-	//Movimiento del coche
-	if (circuito)
+	if (animacion1)
 	{
-		if (recorrido1)
+		if (bala1)
 		{
-			movKitZ += 0.1f;
-			if (movKitZ > 90)
-			{
-				recorrido1 = false;
-				recorrido2 = true;
-			}
-		}
-		if (recorrido2)
-		{
-			rotKit = 90;
 			movKitX += 0.1f;
-			if (movKitX > 90)
+			if (movKitX > 15.0f)
 			{
-				recorrido2 = false;
-				recorrido3 = true;
-
+				bala1 = false;
+				movKitX = 0.0f;	
 			}
 		}
+	}
 
-		if (recorrido3)
+	if (animacion2)
+	{
+		if (soles)
 		{
-			rotKit = 180;
-			movKitZ -= 0.1f;
-			if (movKitZ < 0)
+			movKitY -= 0.1f;
+			if (movKitY < -9.0f)
 			{
-				recorrido3 = false;
-				recorrido4 = true;
+				soles = false;
+				
 			}
 		}
+	}
 
-		if (recorrido4)
+	if (animacion3)
+	{
+		if (ptt)
 		{
-			rotKit = 270;
-			movKitX -= 0.1f;
-			if (movKitX < 0)
+			movptt += 0.05f;
+			if (movptt >  1.0)
 			{
-				recorrido4 = false;
-				recorrido5 = true;
+				ptt = false;
+
 			}
 		}
-		if (recorrido5)
+	}
+
+	if (animacion4)
+	{
+		if (kk1)
 		{
-			rotKit = 0;
-			movKitZ += 0.1f;
-			if (movKitZ > 0)
+			movkk1 -= 0.1f;
+			if (movkk1 < -1.0)
 			{
-				recorrido5 = false;
-				recorrido1 = true;
+				kk2 = true;
+
 			}
 		}
+		if (kk2)
+		{
+			movkk2 -= 0.1f;
+			if ( movkk1< -15.0)
+			{
+				kk1 = false;
+				kk2 = false;
+				movkk1 = 0.0f;
+				movkk2 = 0.0f;
+			}
+		}
+	}
 
+	if (animacion5)
+	{
+		if (nen1)
+		{
+			movnenX -= 0.1f;
+			movnenZ += 0.1f;
+			if (movnenZ > 2.0)
+			{
+				nen1 = false;
+				nen2 = true;
 
+			}
+		}
+		if (nen2)
+		{
+			movnenX -= 0.1f;
+			movnenZ -= 0.1f;
+			if (movnenZ < -0.3)
+			{
+				nen1 = false;
+				nen2 = false;
+			}
+		}
 	}
 }
 

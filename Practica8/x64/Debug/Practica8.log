@@ -1,0 +1,67 @@
+﻿proy.obj : error LNK2019: símbolo externo __imp_glBindTexture sin resolver al que se hace referencia en la función "public: void __cdecl Mesh::Draw(class Shader)" (?Draw@Mesh@@QEAAXVShader@@@Z)
+proy.obj : error LNK2019: símbolo externo __imp_glBlendFunc sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo __imp_glClear sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo __imp_glClearColor sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo __imp_glDrawArrays sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo __imp_glDrawElements sin resolver al que se hace referencia en la función "public: void __cdecl Mesh::Draw(class Shader)" (?Draw@Mesh@@QEAAXVShader@@@Z)
+proy.obj : error LNK2019: símbolo externo __imp_glEnable sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo __imp_glGenTextures sin resolver al que se hace referencia en la función "int __cdecl TextureFromFile(char const *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?TextureFromFile@@YAHPEBDV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+proy.obj : error LNK2019: símbolo externo __imp_glTexImage2D sin resolver al que se hace referencia en la función "int __cdecl TextureFromFile(char const *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?TextureFromFile@@YAHPEBDV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+proy.obj : error LNK2019: símbolo externo __imp_glTexParameteri sin resolver al que se hace referencia en la función "int __cdecl TextureFromFile(char const *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?TextureFromFile@@YAHPEBDV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+proy.obj : error LNK2019: símbolo externo __imp_glViewport sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo __imp_glewInit sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo glfwInit sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo glfwTerminate sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo glfwWindowHint sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo glfwCreateWindow sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo glfwWindowShouldClose sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo glfwSetWindowShouldClose sin resolver al que se hace referencia en la función "void __cdecl KeyCallback(struct GLFWwindow *,int,int,int,int)" (?KeyCallback@@YAXPEAUGLFWwindow@@HHHH@Z)
+proy.obj : error LNK2019: símbolo externo glfwGetFramebufferSize sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo glfwPollEvents sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo glfwSetInputMode sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo glfwSetKeyCallback sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo glfwSetCursorPosCallback sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo glfwGetTime sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo glfwMakeContextCurrent sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo glfwSwapBuffers sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo stbi_load sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo stbi_image_free sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo stbi_set_flip_vertically_on_load sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo SOIL_load_image sin resolver al que se hace referencia en la función "int __cdecl TextureFromFile(char const *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?TextureFromFile@@YAHPEBDV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+proy.obj : error LNK2019: símbolo externo SOIL_free_image_data sin resolver al que se hace referencia en la función "int __cdecl TextureFromFile(char const *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?TextureFromFile@@YAHPEBDV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+proy.obj : error LNK2019: símbolo externo "public: __cdecl Assimp::Importer::Importer(void)" (??0Importer@Assimp@@QEAA@XZ) sin resolver al que se hace referencia en la función "private: void __cdecl Model::loadModel(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?loadModel@Model@@AEAAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+proy.obj : error LNK2019: símbolo externo "public: __cdecl Assimp::Importer::~Importer(void)" (??1Importer@Assimp@@QEAA@XZ) sin resolver al que se hace referencia en la función "private: void __cdecl Model::loadModel(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?loadModel@Model@@AEAAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+proy.obj : error LNK2019: símbolo externo "public: struct aiScene const * __cdecl Assimp::Importer::ReadFile(char const *,unsigned int)" (?ReadFile@Importer@Assimp@@QEAAPEBUaiScene@@PEBDI@Z) sin resolver al que se hace referencia en la función "public: struct aiScene const * __cdecl Assimp::Importer::ReadFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,unsigned int)" (?ReadFile@Importer@Assimp@@QEAAPEBUaiScene@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@I@Z)
+proy.obj : error LNK2019: símbolo externo "public: char const * __cdecl Assimp::Importer::GetErrorString(void)const " (?GetErrorString@Importer@Assimp@@QEBAPEBDXZ) sin resolver al que se hace referencia en la función "private: void __cdecl Model::loadModel(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?loadModel@Model@@AEAAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+proy.obj : error LNK2019: símbolo externo aiGetMaterialTextureCount sin resolver al que se hace referencia en la función "public: unsigned int __cdecl aiMaterial::GetTextureCount(enum aiTextureType)const " (?GetTextureCount@aiMaterial@@QEBAIW4aiTextureType@@@Z)
+proy.obj : error LNK2019: símbolo externo aiGetMaterialTexture sin resolver al que se hace referencia en la función "public: enum aiReturn __cdecl aiMaterial::GetTexture(enum aiTextureType,unsigned int,struct aiString *,enum aiTextureMapping *,unsigned int *,float *,enum aiTextureOp *,enum aiTextureMapMode *)const " (?GetTexture@aiMaterial@@QEBA?AW4aiReturn@@W4aiTextureType@@IPEAUaiString@@PEAW4aiTextureMapping@@PEAIPEAMPEAW4aiTextureOp@@PEAW4aiTextureMapMode@@@Z)
+proy.obj : error LNK2019: símbolo externo __imp___glewActiveTexture sin resolver al que se hace referencia en la función "public: void __cdecl Mesh::Draw(class Shader)" (?Draw@Mesh@@QEAAXVShader@@@Z)
+proy.obj : error LNK2019: símbolo externo __imp___glewBindBuffer sin resolver al que se hace referencia en la función "private: void __cdecl Mesh::setupMesh(void)" (?setupMesh@Mesh@@AEAAXXZ)
+proy.obj : error LNK2019: símbolo externo __imp___glewBufferData sin resolver al que se hace referencia en la función "private: void __cdecl Mesh::setupMesh(void)" (?setupMesh@Mesh@@AEAAXXZ)
+proy.obj : error LNK2019: símbolo externo __imp___glewDeleteBuffers sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo __imp___glewGenBuffers sin resolver al que se hace referencia en la función "private: void __cdecl Mesh::setupMesh(void)" (?setupMesh@Mesh@@AEAAXXZ)
+proy.obj : error LNK2019: símbolo externo __imp___glewAttachShader sin resolver al que se hace referencia en la función "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
+proy.obj : error LNK2019: símbolo externo __imp___glewCompileShader sin resolver al que se hace referencia en la función "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
+proy.obj : error LNK2019: símbolo externo __imp___glewCreateProgram sin resolver al que se hace referencia en la función "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
+proy.obj : error LNK2019: símbolo externo __imp___glewCreateShader sin resolver al que se hace referencia en la función "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
+proy.obj : error LNK2019: símbolo externo __imp___glewDeleteShader sin resolver al que se hace referencia en la función "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
+proy.obj : error LNK2019: símbolo externo __imp___glewEnableVertexAttribArray sin resolver al que se hace referencia en la función "private: void __cdecl Mesh::setupMesh(void)" (?setupMesh@Mesh@@AEAAXXZ)
+proy.obj : error LNK2019: símbolo externo __imp___glewGetProgramInfoLog sin resolver al que se hace referencia en la función "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
+proy.obj : error LNK2019: símbolo externo __imp___glewGetProgramiv sin resolver al que se hace referencia en la función "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
+proy.obj : error LNK2019: símbolo externo __imp___glewGetShaderInfoLog sin resolver al que se hace referencia en la función "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
+proy.obj : error LNK2019: símbolo externo __imp___glewGetShaderiv sin resolver al que se hace referencia en la función "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
+proy.obj : error LNK2019: símbolo externo __imp___glewGetUniformLocation sin resolver al que se hace referencia en la función "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
+proy.obj : error LNK2019: símbolo externo __imp___glewLinkProgram sin resolver al que se hace referencia en la función "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
+proy.obj : error LNK2019: símbolo externo __imp___glewShaderSource sin resolver al que se hace referencia en la función "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
+proy.obj : error LNK2019: símbolo externo __imp___glewUniform1f sin resolver al que se hace referencia en la función "public: void __cdecl Mesh::Draw(class Shader)" (?Draw@Mesh@@QEAAXVShader@@@Z)
+proy.obj : error LNK2019: símbolo externo __imp___glewUniform1i sin resolver al que se hace referencia en la función "public: void __cdecl Mesh::Draw(class Shader)" (?Draw@Mesh@@QEAAXVShader@@@Z)
+proy.obj : error LNK2019: símbolo externo __imp___glewUniform3f sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo __imp___glewUniformMatrix4fv sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo __imp___glewUseProgram sin resolver al que se hace referencia en la función "public: void __cdecl Shader::Use(void)" (?Use@Shader@@QEAAXXZ)
+proy.obj : error LNK2019: símbolo externo __imp___glewVertexAttribPointer sin resolver al que se hace referencia en la función "private: void __cdecl Mesh::setupMesh(void)" (?setupMesh@Mesh@@AEAAXXZ)
+proy.obj : error LNK2019: símbolo externo __imp___glewGenerateMipmap sin resolver al que se hace referencia en la función "int __cdecl TextureFromFile(char const *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?TextureFromFile@@YAHPEBDV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+proy.obj : error LNK2019: símbolo externo __imp___glewBindVertexArray sin resolver al que se hace referencia en la función "public: void __cdecl Mesh::Draw(class Shader)" (?Draw@Mesh@@QEAAXVShader@@@Z)
+proy.obj : error LNK2019: símbolo externo __imp___glewDeleteVertexArrays sin resolver al que se hace referencia en la función main
+proy.obj : error LNK2019: símbolo externo __imp___glewGenVertexArrays sin resolver al que se hace referencia en la función "private: void __cdecl Mesh::setupMesh(void)" (?setupMesh@Mesh@@AEAAXXZ)
+proy.obj : error LNK2019: símbolo externo __imp_glewExperimental sin resolver al que se hace referencia en la función main
+C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\x64\Debug\Practica8.exe : fatal error LNK1120: 66 externos sin resolver
