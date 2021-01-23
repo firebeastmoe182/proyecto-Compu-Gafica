@@ -1,15 +1,4 @@
-﻿proy.obj : error LNK2019: símbolo externo __imp_glBindTexture sin resolver al que se hace referencia en la función "public: void __cdecl Mesh::Draw(class Shader)" (?Draw@Mesh@@QEAAXVShader@@@Z)
-proy.obj : error LNK2019: símbolo externo __imp_glBlendFunc sin resolver al que se hace referencia en la función main
-proy.obj : error LNK2019: símbolo externo __imp_glClear sin resolver al que se hace referencia en la función main
-proy.obj : error LNK2019: símbolo externo __imp_glClearColor sin resolver al que se hace referencia en la función main
-proy.obj : error LNK2019: símbolo externo __imp_glDrawArrays sin resolver al que se hace referencia en la función main
-proy.obj : error LNK2019: símbolo externo __imp_glDrawElements sin resolver al que se hace referencia en la función "public: void __cdecl Mesh::Draw(class Shader)" (?Draw@Mesh@@QEAAXVShader@@@Z)
-proy.obj : error LNK2019: símbolo externo __imp_glEnable sin resolver al que se hace referencia en la función main
-proy.obj : error LNK2019: símbolo externo __imp_glGenTextures sin resolver al que se hace referencia en la función "int __cdecl TextureFromFile(char const *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?TextureFromFile@@YAHPEBDV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
-proy.obj : error LNK2019: símbolo externo __imp_glTexImage2D sin resolver al que se hace referencia en la función "int __cdecl TextureFromFile(char const *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?TextureFromFile@@YAHPEBDV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
-proy.obj : error LNK2019: símbolo externo __imp_glTexParameteri sin resolver al que se hace referencia en la función "int __cdecl TextureFromFile(char const *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?TextureFromFile@@YAHPEBDV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
-proy.obj : error LNK2019: símbolo externo __imp_glViewport sin resolver al que se hace referencia en la función main
-proy.obj : error LNK2019: símbolo externo __imp_glewInit sin resolver al que se hace referencia en la función main
+﻿proy.obj : error LNK2019: símbolo externo __imp_glewInit sin resolver al que se hace referencia en la función main
 proy.obj : error LNK2019: símbolo externo glfwInit sin resolver al que se hace referencia en la función main
 proy.obj : error LNK2019: símbolo externo glfwTerminate sin resolver al que se hace referencia en la función main
 proy.obj : error LNK2019: símbolo externo glfwWindowHint sin resolver al que se hace referencia en la función main
@@ -64,4 +53,8 @@ proy.obj : error LNK2019: símbolo externo __imp___glewBindVertexArray sin resol
 proy.obj : error LNK2019: símbolo externo __imp___glewDeleteVertexArrays sin resolver al que se hace referencia en la función main
 proy.obj : error LNK2019: símbolo externo __imp___glewGenVertexArrays sin resolver al que se hace referencia en la función "private: void __cdecl Mesh::setupMesh(void)" (?setupMesh@Mesh@@AEAAXXZ)
 proy.obj : error LNK2019: símbolo externo __imp_glewExperimental sin resolver al que se hace referencia en la función main
-C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\x64\Debug\Practica8.exe : fatal error LNK1120: 66 externos sin resolver
+C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\\External Libraries\assimp\lib\assimp-vc140-mt.lib : warning LNK4272: el tipo de máquina de biblioteca 'x86' está en conflicto con el tipo de máquina de destino 'x64'
+C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\\External Libraries\GLEW\lib\Release\Win32\glew32.lib : warning LNK4272: el tipo de máquina de biblioteca 'x86' está en conflicto con el tipo de máquina de destino 'x64'
+C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\\External Libraries\GLFW\lib-vc2015\glfw3.lib : warning LNK4272: el tipo de máquina de biblioteca 'x86' está en conflicto con el tipo de máquina de destino 'x64'
+C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\\External Libraries\SOIL2\lib\soil2-debug.lib : warning LNK4272: el tipo de máquina de biblioteca 'x86' está en conflicto con el tipo de máquina de destino 'x64'
+C:\Users\green\OneDrive\Documentos\CompuGrafica\Practicas\Practica8\x64\Debug\Practica8.exe : fatal error LNK1120: 55 externos sin resolver

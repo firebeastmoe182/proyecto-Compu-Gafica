@@ -159,6 +159,9 @@ int main()
 	Model bala((char*)"Models/proyecto/bala.obj");
 	Model hongosol((char*)"Models/proyecto/hongosol.obj");
 	Model patatabum((char*)"Models/proyecto/patatabum.obj");
+	Model cocos((char*)"Models/proyecto/cocos.obj");
+	Model hongoconf((char*)"Models/proyecto/HongoConf.obj");
+	Model melon((char*)"Models/proyecto/melon.obj");
 	// Build and compile our shader program
 
 
@@ -500,17 +503,17 @@ int main()
 		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		nenufar.Draw(lightingShader);
-		//Hongonoche
+		//Hongoconf
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
 
-		model = glm::translate(model, glm::vec3(-9.6f, 0.4f, 0.4f));
-		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
+		model = glm::translate(model, glm::vec3(-9.6f, 0.2f, 0.5f));
+		model = glm::scale(model, glm::vec3(0.3f, 0.3f, 0.3f));
 		model = glm::rotate(model, glm::radians(-180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		hongonoche.Draw(lightingShader);
+		hongoconf.Draw(lightingShader);
 
-		//Cacahuate
+		//Cacahuate 
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
 		
@@ -519,24 +522,27 @@ int main()
 		model = glm::rotate(model, glm::radians(-180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Cacahuate.Draw(lightingShader);
-
+		//melon
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
 
 		model = glm::translate(model, glm::vec3(20.6f, 0.0f, 4.5f));
 		model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
-		//model = glm::rotate(model, glm::radians(-180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		Cacahuate.Draw(lightingShader);
-
+		melon.Draw(lightingShader);
+		
+		
+		
+		//COCO
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
 
-		model = glm::translate(model, glm::vec3(-14.6f, 0.0f, 3.8f));
-		model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+		model = glm::translate(model, glm::vec3(-14.6f, 0.0f, 5.5f));
+		model = glm::scale(model, glm::vec3(0.8f, 0.8f, 0.8f));
 		model = glm::rotate(model, glm::radians(-180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		Cacahuate.Draw(lightingShader);
+		cocos.Draw(lightingShader);
 
 		//vallas
 		view = camera.GetViewMatrix();
